@@ -30,28 +30,33 @@ function Reservations() {
   if (reservations.length === 0) return <p>Nuk ka rezervime për të shfaqur</p>;
 
   return (
-    <div className="max-w-6xl mx-auto p-4">
-      <h1 className="text-3xl mb-6 font-bold">Të gjitha Rezervimet</h1>
-      <table className="w-full table-auto border-collapse border border-gray-300">
+    <div className="max-w-6xl p-4 mx-auto">
+      <h1 className="mb-6 text-3xl font-bold">Të gjitha Rezervimet</h1>
+      <table className="w-full border border-collapse border-gray-300 table-auto">
         <thead>
           <tr className="bg-gray-100">
-            <th className="border p-2">Emri</th>
-            <th className="border p-2">Email</th>
-            <th className="border p-2">Data</th>
-            <th className="border p-2">Ora</th>
-            <th className="border p-2">Shërbimi / Paketa</th>
+            <th className="p-2 border">Emri</th>
+            <th className="p-2 border">Email</th>
+            <th className="p-2 border">Data</th>
+            <th className="p-2 border">Ora</th>
+            <th className="p-2 border">Shërbimi / Paketa</th>
+            <th className="p-2 border">Statusi</th>
           </tr>
         </thead>
         <tbody>
           {reservations.map((r) => (
-            <tr key={r.id} className="hover:bg-gray-50">
-              <td className="border p-2">{r.name}</td>
-              <td className="border p-2">{r.email}</td>
-              <td className="border p-2">{r.date}</td>
-              <td className="border p-2">{r.time}</td>
-              <td className="border p-2">
-                {r.serviceTitle || r.packageTitle || "—"}
-              </td>
+            <tr
+              key={r.id}
+              className={`hover:bg-gray-50 ${
+                r.status === "canceled" ? "bg-red-100 text-red-700" : ""
+              }`}
+            >
+              <td className="p-2 border">{r.name}</td>
+              <td className="p-2 border">{r.email}</td>
+              <td className="p-2 border">{r.date}</td>
+              <td className="p-2 border">{r.time}</td>
+              <td className="p-2 border">{r.serviceTitle || r.packageTitle || "—"}</td>
+              <td className="p-2 capitalize border">{r.status}</td>
             </tr>
           ))}
         </tbody>

@@ -1,6 +1,8 @@
+// src/components/Navbar.js
 import { HashLink } from "react-router-hash-link";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -17,42 +19,80 @@ function Navbar() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setUser(null);
-    navigate("/"); 
+    navigate("/");
   };
 
   return (
-    <nav className="sticky top-0 z-50 flex items-center justify-between p-4 bg-white shadow-md">
-      <div
-        className="text-2xl font-bold text-green-700 cursor-pointer"
-        onClick={() => navigate("/")}
-      >
-        Spa Tirana
-      </div>
+    <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
+      <div className="flex items-center justify-between h-16 px-4 mx-auto max-w-7xl md:px-8">
+        {/* LOGO */}
+        <div
+          onClick={() => navigate("/")}
+          className="text-2xl font-bold text-green-700 cursor-pointer hover:text-green-800"
+        >
+          Spa Tirana
+        </div>
 
-      <div className="flex items-center gap-6 font-medium text-black-700">
-        <HashLink smooth to="/#home" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:text-green-600"> Home </HashLink>
-        <HashLink smooth to="/#services" className="hover:text-green-600">Shërbimet</HashLink>
-        <HashLink smooth to="/#packages" className="hover:text-green-600">Paketat</HashLink>
-        <HashLink smooth to="/contact" className="hover:text-green-600">Kontakt</HashLink>
-
-        {user ? (
-          <>
-
-            <button
-              onClick={handleLogout}
-              className="px-3 py-1 border rounded border-black-600 text-black-600 hover:bg-red-100"
-            >
-              Dil
-            </button>
-          </>
-        ) : (
-          <button
-            onClick={() => navigate("/login")}
-            className="px-3 py-1 font-semibold text-green-600 border border-green-600 rounded hover:bg-green-100"
+        {/* MENU */}
+        <div className="items-center hidden gap-6 md:flex">
+          <HashLink
+            smooth
+            to="/#home"
+            className="font-medium text-gray-700 hover:text-green-600"
           >
-            Hyr
-          </button>
-        )}
+            Kreu
+          </HashLink>
+          <HashLink
+            smooth
+            to="/#services"
+            className="font-medium text-gray-700 hover:text-green-600"
+          >
+            Shërbimet
+          </HashLink>
+          <HashLink
+            smooth
+            to="/#packages"
+            className="font-medium text-gray-700 hover:text-green-600"
+          >
+            Paketat
+          </HashLink>
+          <HashLink
+            smooth
+            to="/contact"
+            className="font-medium text-gray-700 hover:text-green-600"
+          >
+            Kontakt
+          </HashLink>
+        </div>
+
+        {/* PROFILI / LOGIN */}
+        <div className="flex items-center gap-3">
+          {!user ? (
+            <button
+              onClick={() => navigate("/login")} // <- KY ËSHTË NDRYSHIMI KRYESOR
+              className="flex items-center gap-2 px-4 py-1 font-semibold text-green-700 transition border border-green-600 rounded-lg hover:bg-green-100"
+            >
+              <FaUserCircle className="text-xl" />
+              Hyr
+            </button>
+          ) : (
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => navigate("/profile")}
+                className="flex items-center gap-2 px-4 py-1 font-semibold text-green-700 transition border border-green-600 rounded-lg hover:bg-green-100"
+              >
+                <FaUserCircle className="text-xl" />
+                Profili
+              </button>
+              <button
+                onClick={handleLogout}
+                className="px-4 py-1 font-semibold text-red-600 transition border border-red-500 rounded-lg hover:bg-red-50"
+              >
+                Dil
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

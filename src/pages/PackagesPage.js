@@ -45,7 +45,7 @@ function PackagesPage() {
                 <img
                   src={`http://localhost:5000${pkg.image}`}
                   alt={pkg.title}
-                  className="object-cover w-full h-48"
+                  className="object-cover w-full h-68"
                 />
               )}
               <div className="p-6">
