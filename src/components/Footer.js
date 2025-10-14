@@ -7,9 +7,9 @@ function Footer() {
       <div className="container grid grid-cols-1 gap-8 px-6 mx-auto md:grid-cols-2">
   
         <div>
-          <h2 className="mb-4 text-xl font-bold">My Spa Tirana</h2>
+          <h2 className="mb-4 text-xl font-bold">Spa Tirana</h2>
           <p className="text-sm leading-6">
-            My Spa Tirana është vendi ideal për relaks dhe kujdes ndaj vetes.
+            Spa Tirana është vendi ideal për relaks dhe kujdes ndaj vetes.
             Ofron masazhe relaksuese, trajtime fytyre dhe terapi të personalizuara
             për mirëqenien tuaj.
           </p>
@@ -17,9 +17,9 @@ function Footer() {
 
         <div>
           <h2 className="mb-4 text-xl font-bold">Kontakt</h2>
-          <p className="text-sm">📍 <a href="https://maps.google.com/?q=My+Spa+Tirana" target="_blank" rel="noopener noreferrer" className="hover:text-green-400">Rruga Him Kolli, Tiranë, Shqipëri</a></p>
-          <p className="text-sm">📞 <a href="tel:+355697764745" className="hover:text-green-400">+355 69 776 4745</a></p>
-          <p className="text-sm"><a href="mailto:info@myspatirana.com" className="underline hover:text-green-400">info@myspatirana.com</a></p>
+          <p className="text-sm">📍 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="hover:text-green-400">Rruga Him Kolli, Tiranë, Shqipëri</a></p>
+          <p className="text-sm">📞 <a href="tel:+355675553631" className="hover:text-green-400">+355 67 555 3631</a></p>
+          <p className="text-sm"><a href="mailto:mekshiklodi10.com" className="underline hover:text-green-400">mekshiklodi10@gmail.com</a></p>
 
           
           <div className="mb-4">

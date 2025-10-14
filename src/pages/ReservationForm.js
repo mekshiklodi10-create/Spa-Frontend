@@ -18,9 +18,7 @@ function ReservationForm() {
   if (!service && !pkg) {
     return (
       <div className="p-6 text-center">
-        <p className="text-red-600 font-semibold">
-          Asnjë shërbim ose paketë e zgjedhur
-        </p>
+        <p className="text-red-600 font-semibold">Asnjë shërbim ose paketë e zgjedhur</p>
       </div>
     );
   }
@@ -54,11 +52,9 @@ function ReservationForm() {
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.message || "Gabim gjatë rezervimit");
-
       
       alert(`Rezervimi u krye me sukses! ID: ${data.reservationId}`);
-
-      
+    
       setForm({ name: "", email: "", date: "", time: "" });
 
     
@@ -82,11 +78,7 @@ function ReservationForm() {
 
         <div className="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
           {chosenItem.image_url && (
-            <img
-              src={chosenItem.image_url}
-              alt={chosenItem.title}
-              className="w-full h-48 object-cover mb-4 rounded"
-            />
+            <img src={chosenItem.image_url} alt={chosenItem.title} className="w-full h-48 object-cover mb-4 rounded"/>
           )}
 
           {chosenItem.description && (
@@ -95,46 +87,12 @@ function ReservationForm() {
           <p className="font-semibold mb-6">{chosenItem.price} €</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Emri juaj"
-              value={form.name}
-              onChange={handleChange}
-              className="w-full border rounded p-2"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
-              className="w-full border rounded p-2"
-              required
-            />
-            <input
-              type="date"
-              name="date"
-              value={form.date}
-              onChange={handleChange}
-              className="w-full border rounded p-2"
-              required
-            />
-            <input
-              type="time"
-              name="time"
-              value={form.time}
-              onChange={handleChange}
-              className="w-full border rounded p-2"
-              required
-            />
+            <input type="text" name="name" placeholder="Emri juaj" value={form.name} onChange={handleChange} className="w-full border rounded p-2" required/>
+            <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="w-full border rounded p-2" required/>
+            <input type="date" name="date" value={form.date} onChange={handleChange} className="w-full border rounded p-2" required/>
+            <input type="time" name="time" value={form.time} onChange={handleChange} className="w-full border rounded p-2" required/>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-green-500 text-white font-semibold py-2 rounded hover:bg-green-600 transition disabled:opacity-50"
-            >
+            <button type="submit" disabled={loading} className="w-full bg-green-500 text-white font-semibold py-2 rounded hover:bg-green-600 transition disabled:opacity-50">
               {loading ? "Duke ruajtur..." : "Konfirmo Rezervimin"}
             </button>
           </form>

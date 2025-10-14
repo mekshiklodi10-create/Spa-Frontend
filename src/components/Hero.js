@@ -52,7 +52,7 @@ function Hero() {
           </p>
 
           <p className="text-base leading-relaxed md:text-lg">
-            Misioni ynë është që çdo vizitë në My Spa Tirana të jetë një eksperiencë 
+            Misioni ynë është që çdo vizitë në Spa Tirana të jetë një eksperiencë 
             unike që ju ndihmon të ndiheni më të qetë, më të shëndetshëm dhe më të 
             bukur. Ju ftojmë të na vizitoni dhe të përjetoni çaste të paharrueshme 
             relaksi në zemër të Tiranës.
