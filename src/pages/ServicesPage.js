@@ -10,7 +10,7 @@ function Services() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/services");
+        const res = await fetch("/api/services");
         if (!res.ok) throw new Error("Gabim në marrjen e shërbimeve");
         const data = await res.json();
         setServices(data);
@@ -44,7 +44,7 @@ function Services() {
             >
               {service.image && (
                 <img
-                  src={`http://localhost:5000${service.image}`}
+                  src={`${service.image}`}
                   alt={service.title}
                   className="object-cover w-full h-48"
                 />

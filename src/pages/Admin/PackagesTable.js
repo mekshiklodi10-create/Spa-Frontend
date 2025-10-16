@@ -202,7 +202,7 @@ function PackagesDashboard() {
               <td className="p-2 border">
                 {p.image ? (
                   <img
-                    src={`http://localhost:5000${p.image}`}
+                    src={`${p.image}`}
                     alt={p.title}
                     className="object-cover w-20 h-16 rounded"
                   />

@@ -253,7 +253,7 @@ function ServicesDashboard() {
               <td className="p-2 border">
                 {s.image ? (
                   <img
-                    src={`http://localhost:5000${s.image}`}
+                    src={`${s.image}`}
                     alt={s.title}
                     className="object-cover w-20 h-16 rounded"
                   />

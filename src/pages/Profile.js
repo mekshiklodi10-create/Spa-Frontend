@@ -26,7 +26,7 @@ function Profile() {
 
   const fetchReservations = async (email) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/reservations/user/${email}`);
+      const res = await axios.get(`/api/reservations/user/${email}`);
       setReservations(res.data);
     } catch (err) {
       console.error("Gabim në marrjen e rezervimeve:", err);
@@ -35,7 +35,7 @@ function Profile() {
 
   const fetchUserData = async (email) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/users/${email}`);
+      const res = await axios.get(`/api/users/${email}`);
       setUser(res.data);
       setForm(res.data);
     } catch (err) {
@@ -51,7 +51,7 @@ function Profile() {
   try {
     const encodedEmail = encodeURIComponent(user.email); // <--- KODIMI
     await axios.put(
-      `http://localhost:5000/api/users/${encodedEmail}`,
+      `/api/users/${encodedEmail}`,
       form
     );
 
@@ -73,7 +73,7 @@ function Profile() {
 
   const handleCancel = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/reservations/cancel/${id}`);
+      await axios.put(`/api/reservations/cancel/${id}`);
       fetchReservations(user.email);
     } catch (err) {
       console.error("Gabim në anulimin e rezervimit:", err);

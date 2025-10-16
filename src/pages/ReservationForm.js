@@ -18,7 +18,7 @@ function ReservationForm() {
   if (!service && !pkg) {
     return (
       <div className="p-6 text-center">
-        <p className="text-red-600 font-semibold">Asnjë shërbim ose paketë e zgjedhur</p>
+        <p className="font-semibold text-red-600">Asnjë shërbim ose paketë e zgjedhur</p>
       </div>
     );
   }
@@ -39,7 +39,7 @@ function ReservationForm() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/reservations", {
+      const res = await fetch("/api/reservations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -69,30 +69,30 @@ function ReservationForm() {
   const chosenItem = service || pkg;
 
   return (
-    <section className="py-12 bg-gray-50 min-h-screen">
-      <div className="container mx-auto px-6">
-        <h2 className="text-2xl font-bold mb-6 text-center">
+    <section className="min-h-screen py-12 bg-gray-50">
+      <div className="container px-6 mx-auto">
+        <h2 className="mb-6 text-2xl font-bold text-center">
           Rezervim për:{" "}
           <span className="text-green-600">{chosenItem.title}</span>
         </h2>
 
-        <div className="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+        <div className="max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md">
           {chosenItem.image_url && (
-            <img src={chosenItem.image_url} alt={chosenItem.title} className="w-full h-48 object-cover mb-4 rounded"/>
+            <img src={chosenItem.image_url} alt={chosenItem.title} className="object-cover w-full h-48 mb-4 rounded"/>
           )}
 
           {chosenItem.description && (
             <p className="mb-2 text-gray-700">{chosenItem.description}</p>
           )}
-          <p className="font-semibold mb-6">{chosenItem.price} €</p>
+          <p className="mb-6 font-semibold">{chosenItem.price} €</p>
 
           <form onSubmit={handleSubmit} className="space-y-4">
-            <input type="text" name="name" placeholder="Emri juaj" value={form.name} onChange={handleChange} className="w-full border rounded p-2" required/>
-            <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="w-full border rounded p-2" required/>
-            <input type="date" name="date" value={form.date} onChange={handleChange} className="w-full border rounded p-2" required/>
-            <input type="time" name="time" value={form.time} onChange={handleChange} className="w-full border rounded p-2" required/>
+            <input type="text" name="name" placeholder="Emri juaj" value={form.name} onChange={handleChange} className="w-full p-2 border rounded" required/>
+            <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="w-full p-2 border rounded" required/>
+            <input type="date" name="date" value={form.date} onChange={handleChange} className="w-full p-2 border rounded" required/>
+            <input type="time" name="time" value={form.time} onChange={handleChange} className="w-full p-2 border rounded" required/>
 
-            <button type="submit" disabled={loading} className="w-full bg-green-500 text-white font-semibold py-2 rounded hover:bg-green-600 transition disabled:opacity-50">
+            <button type="submit" disabled={loading} className="w-full py-2 font-semibold text-white transition bg-green-500 rounded hover:bg-green-600 disabled:opacity-50">
               {loading ? "Duke ruajtur..." : "Konfirmo Rezervimin"}
             </button>
           </form>

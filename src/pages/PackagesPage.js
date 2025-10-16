@@ -10,7 +10,7 @@ function PackagesPage() {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/packages");
+        const res = await fetch("/api/packages");
         if (!res.ok) throw new Error("Gabim në marrjen e paketimeve");
         const data = await res.json();
         setPackages(data);

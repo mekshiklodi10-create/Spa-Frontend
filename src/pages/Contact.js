@@ -21,7 +21,7 @@ function Contact() {
     setStatus("Duke dërguar...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
@@ -86,7 +86,7 @@ function Contact() {
         </button>
 
         {status && (
-          <p className="text-center text-sm text-gray-700 mt-4">{status}</p>
+          <p className="mt-4 text-sm text-center text-gray-700">{status}</p>
         )}
       </form>
     </section>
