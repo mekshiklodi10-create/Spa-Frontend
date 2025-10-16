@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://backend-delta-weld-98.vercel.app/api", 
+  baseURL: "spa-backend-delta.vercel.app/api",
 });
 
 export const registerUser = (formData) => API.post("/auth/register", formData);
