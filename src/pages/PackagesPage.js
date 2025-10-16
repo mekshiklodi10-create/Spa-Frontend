@@ -10,7 +10,7 @@ function PackagesPage() {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const res = await fetch("https://spa-managment-orpin.vercel.app/packages");
+        const res = await fetch("https://spa-backend-nine.vercel.app/packages");
         if (!res.ok) throw new Error("Gabim në marrjen e paketimeve");
         const data = await res.json();
         setPackages(data);
