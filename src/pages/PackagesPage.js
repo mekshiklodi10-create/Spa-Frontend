@@ -43,7 +43,7 @@ function PackagesPage() {
             >
               {pkg.image && (
                 <img
-                  src={`${pkg.image}`}
+                  src={`https://spa-backend-nine.vercel.app/packages/${pkg.image}`}
                   alt={pkg.title}
                   className="object-cover w-full h-68"
                 />
