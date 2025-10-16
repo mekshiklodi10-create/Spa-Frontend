@@ -22,7 +22,7 @@ function PackagesDashboard() {
   const fetchPackages = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/packages", {
+      const res = await fetch("/api/packages", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("Gabim në marrjen e paketave");
@@ -63,8 +63,8 @@ function PackagesDashboard() {
 
     try {
       const url = isEditing
-        ? `http://localhost:5000/api/packages/${id}`
-        : "http://localhost:5000/api/packages";
+        ? `/api/packages/${id}`
+        : "/api/packages";
       const method = isEditing ? "PUT" : "POST";
 
       const formData = new FormData();
@@ -98,7 +98,7 @@ function PackagesDashboard() {
       description: p.description,
       price: p.price,
       image: null,
-      imagePreview: p.image ? `http://localhost:5000${p.image}` : null,
+      imagePreview: p.image ? `${p.image}` : null,
     });
     setIsEditing(true);
   };
