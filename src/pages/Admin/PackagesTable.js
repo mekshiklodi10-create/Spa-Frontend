@@ -108,7 +108,7 @@ function PackagesDashboard() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/packages/${id}`, {
+      const res = await fetch(`/api/packages/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

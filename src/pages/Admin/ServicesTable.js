@@ -158,7 +158,7 @@ function ServicesDashboard() {
         return;
       }
 
-      const res = await fetch(`http://localhost:5000/api/services/${id}`, {
+      const res = await fetch(`/api/services/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
