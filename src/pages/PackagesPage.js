@@ -10,7 +10,7 @@ function PackagesPage() {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const res = await fetch("/api/packages");
+        const res = await fetch("https://spa-managment-orpin.vercel.app/packages/packages");
         if (!res.ok) throw new Error("Gabim në marrjen e paketimeve");
         const data = await res.json();
         setPackages(data);
@@ -43,7 +43,7 @@ function PackagesPage() {
             >
               {pkg.image && (
                 <img
-                  src={`http://localhost:5000${pkg.image}`}
+                  src={`${pkg.image}`}
                   alt={pkg.title}
                   className="object-cover w-full h-68"
                 />
