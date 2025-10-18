@@ -18,7 +18,7 @@ function Register() {
       const res = await fetch("https://spa-backend-5xtx.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ name, email, password, role: "user", phone: "" })
       });
 
       const data = await res.json();
