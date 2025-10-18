@@ -22,7 +22,7 @@ function PackagesDashboard() {
   const fetchPackages = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("/api/packages", {
+      const res = await fetch("https://spa-backend-5xtx.onrender.com/api/packages", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("Gabim në marrjen e paketave");
@@ -63,8 +63,8 @@ function PackagesDashboard() {
 
     try {
       const url = isEditing
-        ? `/api/packages/${id}`
-        : "/api/packages";
+        ? `https://spa-backend-5xtx.onrender.com/api/packages/${id}`
+        : "https://spa-backend-5xtx.onrender.com/api/packages";
       const method = isEditing ? "PUT" : "POST";
 
       const formData = new FormData();
@@ -108,7 +108,7 @@ function PackagesDashboard() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`/api/packages/${id}`, {
+      const res = await fetch(`https://spa-backend-5xtx.onrender.com/api/packages/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -202,7 +202,7 @@ function PackagesDashboard() {
               <td className="p-2 border">
                 {p.image ? (
                   <img
-                    src={`/uploads/${p.image}`}
+                    src={`https://spa-backend-5xtx.onrender.com/${p.image}`}
                     alt={p.title}
                     className="object-cover w-20 h-16 rounded"
                   />
