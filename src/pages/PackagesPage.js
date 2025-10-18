@@ -10,7 +10,7 @@ function PackagesPage() {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const res = await fetch("https://spa-backend-nine.vercel.app/packages");
+        const res = await fetch("/api/packages");
         if (!res.ok) throw new Error("Gabim në marrjen e paketimeve");
         const data = await res.json();
         setPackages(data);
@@ -43,7 +43,7 @@ function PackagesPage() {
             >
               {pkg.image && (
                 <img
-                  src={`https://spa-backend-nine.vercel.app/packages/${pkg.image}`}
+                  src={`/api/packages/${pkg.image}`}
                   alt={pkg.title}
                   className="object-cover w-full h-68"
                 />

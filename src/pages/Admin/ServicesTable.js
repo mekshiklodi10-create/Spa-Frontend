@@ -30,7 +30,7 @@ function ServicesDashboard() {
         return;
       }
 
-      const res = await fetch("/api/routes/services", {
+      const res = await fetch("/api/services", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -102,8 +102,8 @@ function ServicesDashboard() {
       }
 
       const url = isEditing
-        ? `/api/routes/services/${id}`
-        : `/api/routes/services`;
+        ? `/api/services/${id}`
+        : `/api/services`;
 
       const res = await fetch(url, {
         method: isEditing ? "PUT" : "POST",
@@ -158,7 +158,7 @@ function ServicesDashboard() {
         return;
       }
 
-      const res = await fetch(`/api/routes/services/${id}`, {
+      const res = await fetch(`/api/services/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
