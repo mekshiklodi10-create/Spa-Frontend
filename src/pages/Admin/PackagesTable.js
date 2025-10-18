@@ -63,7 +63,7 @@ function PackagesDashboard() {
 
     try {
       const url = isEditing
-        ? `/api/packages${id}`
+        ? `/api/packages/${id}`
         : "/api/packages";
       const method = isEditing ? "PUT" : "POST";
 
@@ -202,7 +202,7 @@ function PackagesDashboard() {
               <td className="p-2 border">
                 {p.image ? (
                   <img
-                    src={`/api/packages/${p.image}`}
+                    src={`/uploads/${p.image}`}
                     alt={p.title}
                     className="object-cover w-20 h-16 rounded"
                   />
