@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d40da9b7.css",
+    "main.js": "/static/js/main.297824a7.js",
+    "static/media/spa-hero.jpg": "/static/media/spa-hero.0c0f50ae58c143ff5216.jpg",
+    "static/media/spa-packages.jpg": "/static/media/spa-packages.9c8ed17e9615d5f0001c.jpg",
+    "index.html": "/index.html",
+    "main.d40da9b7.css.map": "/static/css/main.d40da9b7.css.map",
+    "main.297824a7.js.map": "/static/js/main.297824a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d40da9b7.css",
+    "static/js/main.297824a7.js"
+  ]
+}
