@@ -30,7 +30,7 @@ function ServicesDashboard() {
         return;
       }
 
-      const res = await fetch("/api/services", {
+      const res = await fetch("https://spa-backend-5xtx.onrender.com/api/services", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -102,8 +102,8 @@ function ServicesDashboard() {
       }
 
       const url = isEditing
-        ? `/api/services/${id}`
-        : `/api/services`;
+        ? `https://spa-backend-5xtx.onrender.com/api/services/${id}`
+        : `https://spa-backend-5xtx.onrender.com/api/services`;
 
       const res = await fetch(url, {
         method: isEditing ? "PUT" : "POST",
@@ -158,7 +158,7 @@ function ServicesDashboard() {
         return;
       }
 
-      const res = await fetch(`/api/services/${id}`, {
+      const res = await fetch(`https://spa-backend-5xtx.onrender.com/api/services/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -253,7 +253,7 @@ function ServicesDashboard() {
               <td className="p-2 border">
                 {s.image ? (
                   <img
-                    src={`${s.image}`}
+                    src={`https://spa-backend-5xtx.onrender.com${s.image}`}
                     alt={s.title}
                     className="object-cover w-20 h-16 rounded"
                   />
