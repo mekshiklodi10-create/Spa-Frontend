@@ -7,7 +7,7 @@ function Footer() {
       <div className="container grid grid-cols-1 gap-8 px-6 mx-auto md:grid-cols-2">
   
         <div>
-          <h2 className="mb-4 text-xl font-bold">Spa Tirana</h2>
+          <h2 className="mb-4 text-xl font-bold">Spa & Wellness Center</h2>
           <p className="text-sm leading-6">
             Spa & Wellness Center është vendi ideal për relaks dhe kujdes ndaj vetes.
             Ofron masazhe relaksuese, trajtime fytyre dhe terapi të personalizuara
