@@ -9,7 +9,7 @@ function Footer() {
         <div>
           <h2 className="mb-4 text-xl font-bold">Spa Tirana</h2>
           <p className="text-sm leading-6">
-            Spa Tirana është vendi ideal për relaks dhe kujdes ndaj vetes.
+            Spa & Wellness Center është vendi ideal për relaks dhe kujdes ndaj vetes.
             Ofron masazhe relaksuese, trajtime fytyre dhe terapi të personalizuara
             për mirëqenien tuaj.
           </p>
@@ -31,7 +31,7 @@ function Footer() {
         
           <div className="flex mt-4 space-x-4">
             <a 
-              href="https://www.facebook.com/myspatirana" 
+              href="https://www.facebook.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -40,7 +40,7 @@ function Footer() {
               <FaFacebookF className="text-xl" />
             </a>
             <a 
-              href="https://www.instagram.com/myspatirana" 
+              href="https://www.instagram.com/" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -49,7 +49,7 @@ function Footer() {
               <FaInstagram className="text-xl" />
             </a>
             <a 
-              href="https://wa.me/355697764745" 
+              href="https://wa.me/355675553631" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="WhatsApp"
@@ -63,7 +63,7 @@ function Footer() {
 
 
       <div className="pt-4 mt-10 text-xs text-center text-gray-400 border-t border-gray-700">
-        © {new Date().getFullYear()} My Spa Tirana. Të gjitha të drejtat e rezervuara.
+        © {new Date().getFullYear()} Spa & Wellness Center. Të gjitha të drejtat e rezervuara.
       </div>
     </footer>
   );

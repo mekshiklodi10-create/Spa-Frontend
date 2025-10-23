@@ -19,7 +19,7 @@ function Hero() {
   <div className="absolute top-0 left-0 flex flex-col justify-center w-full h-full px-6 text-white md:px-12 bg-black/40">
     <div className="max-w-4xl">
       <h2 className="mb-4 text-3xl font-bold md:text-4xl drop-shadow-lg">
-        Mirë se vini në Spa Tirana
+        Mirë se vini në Spa & Wellness Center
       </h2>
       <p className="max-w-2xl mb-6 text-lg drop-shadow-md">
         Shijoni momente relaksi dhe rigjallërimi në një ambient të qetë dhe
@@ -37,7 +37,7 @@ function Hero() {
         <div className="p-4 mt-6 text-gray-800 rounded-lg shadow-lg bg-white/90">
           <h3 className="mb-4 text-2xl font-bold text-green-700">Rreth Nesh</h3>
           <p className="mb-4 text-base leading-relaxed md:text-lg">
-            Mirë se erdhët në <span className="font-semibold">Spa Tirana</span> – 
+            Mirë se erdhët në <span className="font-semibold">Spa & Wellness Center</span> – 
             një hapësirë e dedikuar për relaks dhe kujdes ndaj vetes.  
             Ne besojmë se harmonia trup–mendje është çelësi i mirëqenies dhe 
             për këtë arsye ofrojmë një gamë të gjerë shërbimesh si masazhe 

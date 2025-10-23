@@ -26,7 +26,7 @@ function Navbar() {
       <div className="flex items-center justify-between h-16 px-4 mx-auto max-w-7xl md:px-8">
         <div
           onClick={() => navigate("/")}
-          className="text-2xl font-bold text-green-700 cursor-pointer hover:text-green-800">Spa Tirana</div>
+          className="text-2xl font-bold text-green-700 cursor-pointer hover:text-green-800">Spa & Wellness Center</div>
 
         <div className="items-center hidden gap-6 md:flex">
           <HashLink

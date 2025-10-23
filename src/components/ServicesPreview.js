@@ -44,7 +44,7 @@ function ServicesPreview() {
       
         <div className="flex justify-center mt-10">
           <Link to="/services"className="px-6 py-2 font-semibold text-white bg-green-500 rounded-md hover:bg-green-600">
-            Shiko më shumë
+            Shiko Shërbimet
           </Link>
         </div>
       </div>

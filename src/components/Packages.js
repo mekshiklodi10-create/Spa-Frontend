@@ -8,7 +8,7 @@ function Packages() {
       className="flex flex-col items-center max-w-6xl gap-10 px-6 py-16 mx-auto md:flex-row"
     >
       <div className="flex-1">
-        <h2 className="mb-4 text-3xl font-bold">Paketat e Spa Tirana</h2>
+        <h2 className="mb-4 text-3xl font-bold">Paketat e Spa & Wellness Center</h2>
         <p className="mb-6 text-gray-600">
           Zgjidhni mes paketave tona të personalizuara që kombinojnë masazhe,
           trajtime fytyre dhe terapi aromatike për një eksperiencë të plotë
