@@ -29,9 +29,7 @@ function Navbar() {
           className="text-2xl font-bold text-green-700 cursor-pointer hover:text-green-800">Spa & Wellness Center</div>
 
         <div className="items-center hidden gap-6 md:flex">
-          <HashLink
-            smooth to="/#home"
-            className="font-medium text-gray-700 hover:text-green-600">Kreu</HashLink>
+          <HashLink smooth to="/#home" className="font-medium text-gray-700 hover:text-green-600">Kreu</HashLink>
           <HashLink smooth to="/#services" className="font-medium text-gray-700 hover:text-green-600">Shërbimet</HashLink>
           <HashLink smooth to="/#packages" className="font-medium text-gray-700 hover:text-green-600"> Paketat</HashLink>
           <HashLink smooth to="/contact" className="font-medium text-gray-700 hover:text-green-600"> Kontakt </HashLink>

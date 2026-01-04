@@ -12,7 +12,7 @@ function Reservations() {
   const fetchReservations = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("https://spa-backend-5xtx.onrender.com/api/reservations", {
+      const res = await fetch("https://spa-backend-gc9u.onrender.com/api/reservations", {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (!res.ok) throw new Error("Gabim në marrjen e rezervimeve");

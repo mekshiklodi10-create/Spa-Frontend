@@ -26,7 +26,7 @@ function Profile() {
 
   const fetchReservations = async (email) => {
     try {
-      const res = await axios.get(`https://spa-backend-5xtx.onrender.com/api/reservations/user/${email}`);
+      const res = await axios.get(`https://spa-backend-gc9u.onrender.com/api/reservations/user/${email}`);
       setReservations(res.data);
     } catch (err) {
       console.error("Gabim në marrjen e rezervimeve:", err);
@@ -35,7 +35,7 @@ function Profile() {
 
   const fetchUserData = async (email) => {
     try {
-      const res = await axios.get(`https://spa-backend-5xtx.onrender.com/api/users/${email}`);
+      const res = await axios.get(`https://spa-backend-gc9u.onrender.com/api/users/${email}`);
       setUser(res.data);
       setForm(res.data);
     } catch (err) {
@@ -49,9 +49,9 @@ function Profile() {
 
   const handleSave = async () => {
   try {
-    const encodedEmail = encodeURIComponent(user.email); // <--- KODIMI
+    const encodedEmail = encodeURIComponent(user.email); 
     await axios.put(
-      `https://spa-backend-5xtx.onrender.com/api/users/${encodedEmail}`,
+      `https://spa-backend-gc9u.onrender.com/api/users/${encodedEmail}`,
       form
     );
 
@@ -73,7 +73,7 @@ function Profile() {
 
   const handleCancel = async (id) => {
     try {
-      await axios.put(`https://spa-backend-5xtx.onrender.com/api/reservations/cancel/${id}`);
+      await axios.put(`https://spa-backend-gc9u.onrender.com/api/reservations/cancel/${id}`);
       fetchReservations(user.email);
     } catch (err) {
       console.error("Gabim në anulimin e rezervimit:", err);

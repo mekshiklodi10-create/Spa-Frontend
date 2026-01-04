@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://spa-backend-5xtx.onrender.com/api",
+  baseURL: "https://spa-backend-gc9u.onrender.com/api",
 });
 
 export const registerUser = (formData) => API.post("/auth/register", formData);
