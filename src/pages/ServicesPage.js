@@ -10,7 +10,7 @@ function Services() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const res = await fetch("https://spa-backend-gc9u.onrender.com/api/services");
+        const res = await fetch("https://spa-backend-2tfg.onrender.com/api/services");
         if (!res.ok) throw new Error("Gabim në marrjen e shërbimeve");
         const data = await res.json();
         setServices(data);
@@ -44,7 +44,7 @@ function Services() {
             >
               {service.image && (
                 <img
-                  src={`https://spa-backend-gc9u.onrender.com${service.image}`}
+                  src={`https://spa-backend-2tfg.onrender.com${service.image}`}
                   alt={service.title}
                   className="object-cover w-full h-48"
                 />

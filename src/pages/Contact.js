@@ -21,7 +21,7 @@ function Contact() {
     setStatus("Duke dërguar...");
 
     try {
-      const response = await fetch("https://spa-backend-gc9u.onrender.com/api/contact", {
+      const response = await fetch("https://spa-backend-2tfg.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)

@@ -15,7 +15,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://spa-backend-gc9u.onrender.com/api/auth/register", {
+      const res = await fetch("https://spa-backend-2tfg.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, email, password, role: "user", phone: "" })

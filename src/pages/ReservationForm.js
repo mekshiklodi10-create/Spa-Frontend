@@ -39,7 +39,7 @@ function ReservationForm() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://spa-backend-gc9u.onrender.com/api/reservations", {
+      const res = await fetch("https://spa-backend-2tfg.onrender.com/api/reservations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
