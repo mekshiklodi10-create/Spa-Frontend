@@ -44,8 +44,8 @@ function ReservationForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          serviceId: service?.id || null,
-          packageId: pkg?.id || null,
+          serviceid: service?.id || null,
+          packageid: pkg?.id || null,
         }),
       });
 
