@@ -29,13 +29,6 @@ function ReservationForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    
-    if (!service?.id && !pkg?.id) {
-      alert("Duhet të zgjidhet një shërbim ose paketë.");
-      return;
-    }
-
     setLoading(true);
 
     try {
@@ -52,12 +45,9 @@ function ReservationForm() {
       const data = await res.json();
 
       if (!res.ok) throw new Error(data.message || "Gabim gjatë rezervimit");
-      
-      alert(`Rezervimi u krye me sukses! ID: ${data.reservationid}`);
-    
-      setForm({ name: "", email: "", date: "", time: "" });
 
-    
+      alert(`Rezervimi u krye me sukses! ID: ${data.reservationid}`);
+      setForm({ name: "", email: "", date: "", time: "" });
       navigate("/");
     } catch (err) {
       alert(`Gabim: ${err.message}`);
@@ -72,15 +62,13 @@ function ReservationForm() {
     <section className="min-h-screen py-12 bg-gray-50">
       <div className="container px-6 mx-auto">
         <h2 className="mb-6 text-2xl font-bold text-center">
-          Rezervim për:{" "}
-          <span className="text-green-600">{chosenItem.title}</span>
+          Rezervim për: <span className="text-green-600">{chosenItem.title}</span>
         </h2>
 
         <div className="max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md">
           {chosenItem.image_url && (
             <img src={chosenItem.image_url} alt={chosenItem.title} className="object-cover w-full h-48 mb-4 rounded"/>
           )}
-
           {chosenItem.description && (
             <p className="mb-2 text-gray-700">{chosenItem.description}</p>
           )}
@@ -91,8 +79,7 @@ function ReservationForm() {
             <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="w-full p-2 border rounded" required/>
             <input type="date" name="date" value={form.date} onChange={handleChange} className="w-full p-2 border rounded" required/>
             <input type="time" name="time" value={form.time} onChange={handleChange} className="w-full p-2 border rounded" required/>
-
-            <button type="submit" disabled={loading} className="w-full py-2 font-semibold text-white transition bg-green-500 rounded hover:bg-green-600 disabled:opacity-50">
+            <button type="submit" disabled={loading} className="w-full py-2 font-semibold text-white bg-green-500 rounded hover:bg-green-600 disabled:opacity-50">
               {loading ? "Duke ruajtur..." : "Konfirmo Rezervimin"}
             </button>
           </form>
