@@ -53,7 +53,7 @@ function ReservationForm() {
 
       if (!res.ok) throw new Error(data.message || "Gabim gjatë rezervimit");
       
-      alert(`Rezervimi u krye me sukses! ID: ${data.reservationId}`);
+      alert(`Rezervimi u krye me sukses! ID: ${data.reservationid}`);
     
       setForm({ name: "", email: "", date: "", time: "" });
 
